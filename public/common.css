@@ -25,6 +25,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html, body{
+    height: 100%;
+}
 body {
 	line-height: 1.5;
 }
@@ -44,8 +47,30 @@ table {
 	border-spacing: 0;
 }
 
+article{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    overflow:hidden;
+    background-color: #000;
+    transition-duration: 0.5s;
+}
 
-#overlay {
+nav{
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+}
+
+#main #main_tocamera{
+    float: left;
+    display:block;
+    padding: 10px;
+    margin: 10px 0px 10px 10px;
+    background-color: #fff;
+}
+
+#camera #camera_overlay {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -54,27 +79,35 @@ table {
 	transform : scaleX(-1);
 	-ms-filter : fliph; /*IE*/
 	filter : fliph; /*IE*/
-
-
 }
 
-#videoel {
+#camera #camera_preview {
 	-o-transform : scaleX(-1);
 	-webkit-transform : scaleX(-1);
 	transform : scaleX(-1);
 	-ms-filter : fliph; /*IE*/
 	filter : fliph; /*IE*/
+    margin-left: auto;
+    margin-right:auto;
 }
 
-#container {
+#camera #container {
 	position : relative;
 	width : 370px;
 	/*margin : 0px auto;*/
 }
 
-#content {
+#camera #content {
 	margin-top : 50px;
 	margin-left : auto;
 	margin-right : auto;
 	max-width: 600px;
+}
+
+#camera #camera_tohome{
+    float: left;
+    display:block;
+    padding: 10px;
+    margin: 10px 0px 10px 10px;
+    background-color: #fff; 
 }
