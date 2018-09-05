@@ -47,7 +47,7 @@ function cameraStop() {
 function adjustVideoProportions() {
     // resize overlay and video if proportions are different
     // keep same height, just change width
-    var proportion = CAM_PRV_ELM.videoWidth / CAM_PRV_ELM.videoHeight;
+    let proportion = CAM_PRV_ELM.videoWidth / CAM_PRV_ELM.videoHeight;
     camPrvWidth = Math.round(camPrvHeight * proportion);
     CAM_PRV_ELM.width = camPrvWidth;
     CAM_OVL_ELM.width = camPrvWidth;

@@ -70,6 +70,13 @@ nav{
     background-color: #fff;
 }
 
+#camera #camera_overlay,
+#camera #camera_preview {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+}
+
 #camera #camera_overlay {
 	position: absolute;
 	top: 0px;
