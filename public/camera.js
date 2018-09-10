@@ -118,15 +118,10 @@ function startVideo() {
 
 /*********** Code for face tracking and face masking *********/
 
-/*
-document.getElementById('selectmask').addEventListener('change', updateMask, false);
-
 function updateMask(el) {
     currentMask = parseInt(el.target.value, 10);
     switchMasks();
 }
-
-*/
 
 let positions;
 const fd = new faceDeformer();
