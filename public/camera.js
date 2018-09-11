@@ -223,7 +223,7 @@ const y = d3.scale.linear()
 
 const svg = d3.select("#emotion_chart").append("svg")
     .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("height", height + margin.top + margin.bottom);
 
 svg.selectAll("rect").
 data(emotionData).
