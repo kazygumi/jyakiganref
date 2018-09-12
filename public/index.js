@@ -8,6 +8,7 @@
     const pageCameraElm = document.getElementById('camera');
     const pageEditElm = document.getElementById('edit');
     const pageShareElm = document.getElementById('share');
+    const pageLicenseElm = document.getElementById('license');
 
     function pageBuild() {
 
@@ -17,6 +18,7 @@
                 setPagePosition(pageCameraElm, 2);
                 setPagePosition(pageEditElm, 2);
                 setPagePosition(pageShareElm, 2);
+                setPagePosition(pageLicenseElm, 2);
                 cameraStop();
                 break;
             case "#camera":
@@ -24,6 +26,7 @@
                 setPagePosition(pageCameraElm, 1);
                 setPagePosition(pageEditElm, 2);
                 setPagePosition(pageShareElm, 2);
+                setPagePosition(pageLicenseElm, 2);
                 cameraStart();
                 break;
             case "#edit":
@@ -31,6 +34,7 @@
                 setPagePosition(pageCameraElm, 0);
                 setPagePosition(pageEditElm, 1);
                 setPagePosition(pageShareElm, 2);
+                setPagePosition(pageLicenseElm, 2);
                 cameraStop();
                 break;
             case "#share":
@@ -38,6 +42,15 @@
                 setPagePosition(pageCameraElm, 0);
                 setPagePosition(pageEditElm, 0);
                 setPagePosition(pageShareElm, 1);
+                setPagePosition(pageLicenseElm, 2);
+                cameraStop();
+                break;
+            case "#license":
+                setPagePosition(pageHomeElm, 0);
+                setPagePosition(pageCameraElm, 0);
+                setPagePosition(pageEditElm, 0);
+                setPagePosition(pageShareElm, 0);
+                setPagePosition(pageLicenseElm, 1);
                 cameraStop();
                 break;
             default:
@@ -45,6 +58,7 @@
                 setPagePosition(pageCameraElm, 2);
                 setPagePosition(pageEditElm, 2);
                 setPagePosition(pageShareElm, 2);
+                setPagePosition(pageLicenseElm, 2);
                 cameraStop();
         }
     }
