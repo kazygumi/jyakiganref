@@ -7,7 +7,6 @@ class Camera {
         this.camOverlayElm = document.getElementById('camera_overlay');
         this.overlayCC = this.camOverlayElm.getContext('2d');
         this.camMaskElm = document.getElementById('camera_mask');
-
         this.stampEyepatch = new Image();
         this.stampEyepatch.src = 'images/eyepatch.png';
 
@@ -52,14 +51,14 @@ class Camera {
         const emotionData = this.ec.getBlank();
 
         const margin = {
-                top: 20,
-                right: 20,
-                bottom: 10,
-                left: 40
-            }
+            top: 20,
+            right: 20,
+            bottom: 10,
+            left: 40
+        }
         const width = 400 - margin.left - margin.right;
-        this.height = 100 - margin.top - margin.bottom;
-
+        const height = 100 - margin.top - margin.bottom;
+        this.height = height;
         const barWidth = 30;
 
         const formatPercent = d3.format('.0%');
@@ -68,9 +67,11 @@ class Camera {
             .domain([0, this.ec.getEmotions().length])
             .range([margin.left, width + margin.left]);
 
-        this.y = d3.scale.linear()
+        const y = d3.scale.linear()
             .domain([0, 1])
             .range([0, this.height]);
+
+        this.y = y;
 
         this.svg = d3.select('#emotion_chart')
             .append('svg')
@@ -85,10 +86,10 @@ class Camera {
                 return x(index);
             })
             .attr('y', function (datum) {
-                return this.height - this.y(datum.value);
+                return height - y(datum.value);
             })
             .attr('height', function (datum) {
-                return this.y(datum.value);
+                return y(datum.value);
             })
             .attr('width', barWidth)
             .attr('fill', '#2d578b');
@@ -101,7 +102,7 @@ class Camera {
                 return x(index) + barWidth;
             })
             .attr('y', function (datum) {
-                return this.height - this.y(datum.value);
+                return height - y(datum.value);
             })
             .attr('dx', -barWidth / 2)
             .attr('dy', '1.2em')
@@ -134,16 +135,16 @@ class Camera {
         if (navigator.mediaDevices) {
             navigator.mediaDevices.getUserMedia({
                 video: true
-            }).then(gumSuccess).catch(gumFail);
+            }).then(this.gumSuccess).catch(this.gumFail);
         } else if (navigator.getUserMedia) {
             navigator.getUserMedia({
                 video: true
-            }, gumSuccess, gumFail);
+            }, this.gumSuccess, this.gumFail);
         } else {
             alert('This demo depends on getUserMedia, which your browser does not seem to support. :(');
         }
 
-        startVideo();
+        this.startVideo();
     }
 
     cameraStop() {
@@ -212,9 +213,9 @@ class Camera {
         this.ctrack.start(this.camPreviewElm);
         this.trackingStarted = true;
         // start loop to draw face
-        drawLoop();
+        this.drawLoop();
         // start drawing face grid
-        drawGridLoop();
+        this.drawGridLoop();
     }
 
     /*********** Code for face tracking and face masking *********/
@@ -223,8 +224,6 @@ class Camera {
         this.currentMask = parseInt(el.target.value, 10);
         switchMasks();
     }
-
-
 
     drawGridLoop() {
         // get position of face
@@ -237,9 +236,9 @@ class Camera {
         const pn = this.ctrack.getConvergence();
         if (pn < 0.4) {
             switchMasks();
-            requestAnimFrame(drawMaskLoop);
+            requestAnimFrame(this.drawMaskLoop);
         } else {
-            requestAnimFrame(drawGridLoop);
+            requestAnimFrame(this.drawGridLoop);
         }
     }
 
@@ -264,7 +263,8 @@ class Camera {
 
 
     drawLoop() {
-        requestAnimFrame(drawLoop);
+        console.log(this.drawLoop);
+        requestAnimFrame(this.drawLoop);
         this.overlayCC.clearRect(0, 0, this.camPreviewWidth, this.camPreviewHeight);
         //psrElement.innerHTML = 'score :' + this.ctrack.getScore().toFixed(4);
 
@@ -274,7 +274,7 @@ class Camera {
         const cp = this.ctrack.getCurrentParameters();
         const er = this.ec.meanPredict(cp);
         if (er) {
-            updateData(er);
+            this.updateData(er);
             for (let i = 0; i < er.length; i++) {
                 if (er[i].value > 0.4) {
                     document.getElementById('icon' + (i + 1)).style.visibility = 'visible';
