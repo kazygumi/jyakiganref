@@ -23,22 +23,21 @@
     <script src="lib/emotion_classifier.js"></script>
     <script src="lib/emotionmodel.js"></script>
     <script src="lib/face_deformer.js"></script>
-    <script src="finder.js" defer></script>
-    <script src="pageManager.js" defer></script>
+    <script src="finderController.js" defer></script>
+    <script src="pageController.js" defer></script>
 </head>
 
 <body>
-    <header>
-        
-    </header>
     <main id="main">
         <article id="home">
+            <h1>邪気眼レフカメラ</h1>
             <nav><a id="main_tocamera" href="#camera">撮影する</a></nav>
             <section><a href="#license">LICENSE</a></section>
         </article>
 
         <article id="camera">
-            <section id="container">
+            <h1>撮影する</h1>
+            <section id="finder">
                 <video id="camera_preview" width="400" height="300" preload="auto" loop playsinline autoplay>
 			</video>
                 <canvas id="camera_overlay" width="400" height="300"></canvas>
@@ -51,21 +50,24 @@
                     <img class="emotion_icon" id="icon3" src="images/icon_surprised.png">
                     <img class="emotion_icon" id="icon4" src="images/icon_happy.png">
                 </div>
-                <div id='emotion_chart'></div>
+                <div id="emotion_chart"></div>
             </section>
-            
+
             <nav><a id="camera_tohome" href="#home">戻る</a><a id="camera_shutter" href="#share">シャッター</a></nav>
         </article>
-        
+
         <article id="edit">
-            
-        </article>
-        
-        <article id="share">
+            <h1>編集する</h1>
             <nav><a href="">戻る</a><a href="">save</a><a href="">HOME</a></nav>
         </article>
-        
+
+        <article id="wishform">
+            <h1>要望・不具合フォーム</h1>
+            <nav><a href="">戻る</a></nav>
+        </article>
+
         <article id="license">
+            <h1>ライセンス</h1>
             <nav><a href="">戻る</a></nav>
         </article>
     </main>

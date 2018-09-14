@@ -1,13 +1,10 @@
 (() => {
     'use strict';
 
-    /**
-     * page build
-     */
     const pageHomeElm = document.getElementById('home');
     const pageCameraElm = document.getElementById('camera');
     const pageEditElm = document.getElementById('edit');
-    const pageShareElm = document.getElementById('share');
+    const pageWishformElm = document.getElementById('wishform');
     const pageLicenseElm = document.getElementById('license');
 
     function pageBuild() {
@@ -17,42 +14,42 @@
                 setPagePosition(pageHomeElm, 1);
                 setPagePosition(pageCameraElm, 2);
                 setPagePosition(pageEditElm, 2);
-                setPagePosition(pageShareElm, 2);
+                setPagePosition(pageWishformElm, 2);
                 setPagePosition(pageLicenseElm, 2);
                 break;
             case "#camera":
                 setPagePosition(pageHomeElm, 0);
                 setPagePosition(pageCameraElm, 1);
                 setPagePosition(pageEditElm, 2);
-                setPagePosition(pageShareElm, 2);
+                setPagePosition(pageWishformElm, 2);
                 setPagePosition(pageLicenseElm, 2);
                 break;
             case "#edit":
                 setPagePosition(pageHomeElm, 0);
                 setPagePosition(pageCameraElm, 0);
                 setPagePosition(pageEditElm, 1);
-                setPagePosition(pageShareElm, 2);
+                setPagePosition(pageWishformElm, 2);
                 setPagePosition(pageLicenseElm, 2);
                 break;
-            case "#share":
+            case "#wishform":
                 setPagePosition(pageHomeElm, 0);
                 setPagePosition(pageCameraElm, 0);
                 setPagePosition(pageEditElm, 0);
-                setPagePosition(pageShareElm, 1);
+                setPagePosition(pageWishformElm, 1);
                 setPagePosition(pageLicenseElm, 2);
                 break;
             case "#license":
                 setPagePosition(pageHomeElm, 0);
                 setPagePosition(pageCameraElm, 0);
                 setPagePosition(pageEditElm, 0);
-                setPagePosition(pageShareElm, 0);
+                setPagePosition(pageWishformElm, 0);
                 setPagePosition(pageLicenseElm, 1);
                 break;
             default:
                 setPagePosition(pageHomeElm, 1);
                 setPagePosition(pageCameraElm, 2);
                 setPagePosition(pageEditElm, 2);
-                setPagePosition(pageShareElm, 2);
+                setPagePosition(pageWishformElm, 2);
                 setPagePosition(pageLicenseElm, 2);
         }
     }
