@@ -1,4 +1,4 @@
-(function () {
+(() => {
     'use strict';
 
     /**
@@ -19,7 +19,6 @@
                 setPagePosition(pageEditElm, 2);
                 setPagePosition(pageShareElm, 2);
                 setPagePosition(pageLicenseElm, 2);
-                cameraStop();
                 break;
             case "#camera":
                 setPagePosition(pageHomeElm, 0);
@@ -27,7 +26,6 @@
                 setPagePosition(pageEditElm, 2);
                 setPagePosition(pageShareElm, 2);
                 setPagePosition(pageLicenseElm, 2);
-                cameraStart();
                 break;
             case "#edit":
                 setPagePosition(pageHomeElm, 0);
@@ -35,7 +33,6 @@
                 setPagePosition(pageEditElm, 1);
                 setPagePosition(pageShareElm, 2);
                 setPagePosition(pageLicenseElm, 2);
-                cameraStop();
                 break;
             case "#share":
                 setPagePosition(pageHomeElm, 0);
@@ -43,7 +40,6 @@
                 setPagePosition(pageEditElm, 0);
                 setPagePosition(pageShareElm, 1);
                 setPagePosition(pageLicenseElm, 2);
-                cameraStop();
                 break;
             case "#license":
                 setPagePosition(pageHomeElm, 0);
@@ -51,7 +47,6 @@
                 setPagePosition(pageEditElm, 0);
                 setPagePosition(pageShareElm, 0);
                 setPagePosition(pageLicenseElm, 1);
-                cameraStop();
                 break;
             default:
                 setPagePosition(pageHomeElm, 1);
@@ -59,7 +54,6 @@
                 setPagePosition(pageEditElm, 2);
                 setPagePosition(pageShareElm, 2);
                 setPagePosition(pageLicenseElm, 2);
-                cameraStop();
         }
     }
 
@@ -100,10 +94,10 @@
 
 
     window.addEventListener('DOMContentLoaded', function (event) {
-        window.onhashchange = locationHashChanged;
+        window.addEventListener("hashchange", locationHashChanged, false);
         window.addEventListener('resize', resize, false);
 
         locationHashChanged();
 
     }, false);
-}());
+})();
