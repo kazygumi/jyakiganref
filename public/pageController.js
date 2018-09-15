@@ -1,83 +1,36 @@
 (() => {
     'use strict';
+    const pageBody = document.getElementById('body_home');
 
-    const pageHomeElm = document.getElementById('home');
-    const pageCameraElm = document.getElementById('camera');
-    const pageEditElm = document.getElementById('edit');
-    const pageWishformElm = document.getElementById('wishform');
-    const pageLicenseElm = document.getElementById('license');
-
-    function pageBuild() {
+    function pageController() {
 
         switch (location.hash) {
             case "#home":
-                setPagePosition(pageHomeElm, 1);
-                setPagePosition(pageCameraElm, 2);
-                setPagePosition(pageEditElm, 2);
-                setPagePosition(pageWishformElm, 2);
-                setPagePosition(pageLicenseElm, 2);
+                pageBody.id = 'body_home';
                 break;
             case "#camera":
-                setPagePosition(pageHomeElm, 0);
-                setPagePosition(pageCameraElm, 1);
-                setPagePosition(pageEditElm, 2);
-                setPagePosition(pageWishformElm, 2);
-                setPagePosition(pageLicenseElm, 2);
+                pageBody.id = 'body_camera';
                 break;
             case "#edit":
-                setPagePosition(pageHomeElm, 0);
-                setPagePosition(pageCameraElm, 0);
-                setPagePosition(pageEditElm, 1);
-                setPagePosition(pageWishformElm, 2);
-                setPagePosition(pageLicenseElm, 2);
+                pageBody.id = 'body_edit';
                 break;
             case "#wishform":
-                setPagePosition(pageHomeElm, 0);
-                setPagePosition(pageCameraElm, 0);
-                setPagePosition(pageEditElm, 0);
-                setPagePosition(pageWishformElm, 1);
-                setPagePosition(pageLicenseElm, 2);
+                pageBody.id = 'body_wishform';
                 break;
             case "#license":
-                setPagePosition(pageHomeElm, 0);
-                setPagePosition(pageCameraElm, 0);
-                setPagePosition(pageEditElm, 0);
-                setPagePosition(pageWishformElm, 0);
-                setPagePosition(pageLicenseElm, 1);
+                pageBody.id = 'body_license';
                 break;
             default:
-                setPagePosition(pageHomeElm, 1);
-                setPagePosition(pageCameraElm, 2);
-                setPagePosition(pageEditElm, 2);
-                setPagePosition(pageWishformElm, 2);
-                setPagePosition(pageLicenseElm, 2);
-        }
-    }
-
-    function setPagePosition(_element, _position) {
-        var element = _element;
-        var position = _position;
-        switch (position) {
-            case 0:
-                element.style.left = '-' + document.body.clientWidth + 'px';
-                break;
-            case 1:
-                element.style.left = '0px';
-                break;
-            case 2:
-                element.style.left = document.body.clientWidth + 'px';
-                break;
-            default:
-                element.style.left = document.body.clientWidth + 'px';
+                pageBody.id = 'body_home';
         }
     }
 
     function locationHashChanged() {
-        pageBuild();
+        pageController();
     }
 
     function resize(event) {
-        pageBuild();
+        pageController();
     }
 
     /******** stats ********/
@@ -88,7 +41,6 @@
     setInterval(function () {
         stats.update();
     }, 1000 / 60);
-
 
     window.addEventListener('DOMContentLoaded', function (event) {
         window.addEventListener("hashchange", locationHashChanged, false);

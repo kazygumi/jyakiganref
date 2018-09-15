@@ -52,8 +52,64 @@ article{
     width: 100%;
     height:100%;
     overflow:hidden;
-    background-color: #000;
     transition-duration: 0.5s;
+    background-color: #000;
+}
+
+#body_home #home{
+    left:0;
+}
+#body_home #camera,
+#body_home #edit,
+#body_home #wishform,
+#body_home #license{
+    left:100vw;
+}
+
+#body_camera #home{
+    left:-100vw;
+}
+#body_camera #camera{
+    left:0;
+}
+#body_camera #edit,
+#body_camera #wishform,
+#body_camera #license{
+    left:100vw;
+}
+
+#body_edit #home,
+#body_edit #camera{
+    left:-100vw;
+}
+#body_edit #edit{
+    left:0;
+}
+#body_edit #wishform,
+#body_edit #license{
+    left:100vw;
+}
+
+#body_wishform #home,
+#body_wishform #camera,
+#body_wishform #edit{
+    left:-100vw;
+}
+#body_wishform #wishform{
+    left:0;
+}
+#body_wishform #license{
+    left:100vw;
+}
+
+#body_license #home,
+#body_license #camera,
+#body_license #edit,
+#body_license #wishform{
+    left:-100vw;
+}
+#body_license #license{
+    left:0;
 }
 
 nav{
@@ -62,7 +118,7 @@ nav{
     width: 100%;
 }
 
-#main #main_tocamera{
+nav a{
     float: left;
     display:block;
     padding: 10px;
@@ -73,8 +129,8 @@ nav{
 #camera #camera_mask,
 #camera #camera_overlay,
 #camera #camera_preview {
-    width: 360px;
-    height: 360px;
+    width: 100vmin;
+    height: 100vmin;
     object-fit: cover;
 }
 
