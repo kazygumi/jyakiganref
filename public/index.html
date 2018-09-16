@@ -23,6 +23,7 @@
     <script src="lib/emotion_classifier.js"></script>
     <script src="lib/emotionmodel.js"></script>
     <script src="lib/face_deformer.js"></script>
+    <script src="photoSaver.js" defer></script>
     <script src="finderController.js" defer></script>
     <script src="pageController.js" defer></script>
 </head>
@@ -53,24 +54,25 @@
                 <div id="emotion_chart"></div>
             </section>
             
-            <nav><a id="camera_tohome" href="#home">戻る</a><a id="camera_shutter" href="#share">シャッター</a></nav>
+            <nav><a download="jyakigan.png" id="camera_shutter" href="#camera">シャッター</a></nav>
         </article>
         
         <article id="edit">
             <h1>編集する</h1>
-            <nav><a href="">戻る</a><a href="">save</a><a href="">HOME</a></nav>
+            <canvas id="save_image" width="400" height="300"></canvas>
+            <nav><a href="">save</a><a href="">HOME</a></nav>
         </article>
         
         <article id="wishform">
             <h1>要望・不具合フォーム</h1>
-            <nav><a href="">戻る</a></nav>
         </article>
         
         <article id="license">
             <h1>ライセンス</h1>
-            <nav><a href="">戻る</a></nav>
         </article>
     </main>
+    
+    <footer><nav><a href="#" id="history_back">戻る</a></nav></footer>
 </body>
 
 </html>

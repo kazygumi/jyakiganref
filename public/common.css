@@ -115,22 +115,32 @@ article{
 nav{
     position:absolute;
     bottom:0px;
-    width: 100%;
+    text-align: right;
+    right:0;
 }
+
+footer nav{
+    left:0;
+    width: 100px;
+}
+
+
 
 nav a{
     float: left;
-    display:block;
+    display:inline-block;
     padding: 10px;
     margin: 10px 0px 10px 10px;
     background-color: #fff;
+    width: 80px;
+    text-align: center;
 }
 
 #camera #camera_mask,
 #camera #camera_overlay,
 #camera #camera_preview {
-    width: 100vmin;
-    height: 100vmin;
+    width: 360px;
+    height: 360px;
     object-fit: cover;
 }
 

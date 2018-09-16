@@ -1,5 +1,5 @@
 (() => {
-    "use strict";
+    'use strict';
 
     const camPreviewElm = document.getElementById('camera_preview');
     let camPreviewWidth = camPreviewElm.width;
@@ -311,13 +311,13 @@
     }
 
     function locationHashChanged() {
-        if (location.hash === "#camera") {
+        if (location.hash === '#camera') {
             cameraStart();
         } else {
             cameraStop();
         }
 
     }
-    window.addEventListener("hashchange", locationHashChanged, false);
+    window.addEventListener('hashchange', locationHashChanged, false);
 
 })();
