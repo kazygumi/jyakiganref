@@ -69,7 +69,7 @@ h1 .deco0 {
     -ms-transform: rotate(10deg);
     transform: rotate(10deg);
     display: inline-block;
-    font-size: 34px;
+    font-size: 40px;
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.1;
     padding: 2px 3px;
@@ -111,7 +111,7 @@ h1 .deco2 {
 }
 
 h1 .deco3 {
-    color: #fff;
+    color: #C60019;
     background: #000;
     -webkit-transform: rotate(8deg);
     -ms-transform: rotate(8deg);
