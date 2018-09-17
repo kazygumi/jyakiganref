@@ -316,8 +316,8 @@
         } else {
             cameraStop();
         }
-
     }
+    
     window.addEventListener('hashchange', locationHashChanged, false);
 
 })();
