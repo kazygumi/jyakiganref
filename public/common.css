@@ -58,7 +58,7 @@ article {
 }
 
 h1 {
-    transform: rotateY(-30deg);
+    transform: rotate3d(-2,5,-1.5,-35deg);
     transform-origin: 50% 50%;
 }
 
@@ -113,11 +113,11 @@ h1 .deco2 {
 h1 .deco3 {
     color: #C60019;
     background: #000;
-    -webkit-transform: rotate(8deg);
-    -ms-transform: rotate(8deg);
-    transform: rotate(8deg);
+    -webkit-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    transform: rotate(-8deg);
     display: inline-block;
-    font-size: 36px;
+    font-size: 20px;
     font-family: 'Noto Serif JP', sans-serif;
     line-height: 1.1;
     padding: 2px 3px;
