@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
-    
+
     <title>邪気眼レフカメラ</title>
-    
+
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
     <link rel="stylesheet" type="text/css" href="common.css" media="screen,print">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700|Noto+Serif+JP:700" rel="stylesheet">
-    
+
     <script src="lib/utils.js"></script>
     <script src="lib/webgl-utils.js"></script>
     <script src="lib/clmtrackr.js"></script>
@@ -24,6 +24,7 @@
     <script src="lib/emotion_classifier.js"></script>
     <script src="lib/emotionmodel.js"></script>
     <script src="lib/face_deformer.js"></script>
+    <script src="lib/html2canvas.min.js"></script>
     <script src="photoSaver.js" defer></script>
     <script src="finderController.js" defer></script>
     <script src="textDecorator.js" defer></script>
@@ -34,18 +35,19 @@
     <main id="main">
         <article id="home">
             <h1>邪気眼レフカメラ</h1>
-            <nav><a id="main_tocamera" href="#camera">撮影する</a></nav>
-            <section><a href="#license">LICENSE</a></section>
+            <a id="home_tocamera" href="#camera">撮影する</a>
         </article>
-        
+
         <article id="camera">
             <h1>撮影する</h1>
-            <section id="finder">
-                <video id="camera_preview" width="400" height="300" preload="auto" loop playsinline autoplay>
-			</video>
-                <canvas id="camera_overlay" width="400" height="300"></canvas>
-                <canvas id="camera_mask" width="400" height="300"></canvas>
+            <section id="camera_finder">
+                <video id="camera_preview" preload="auto" loop playsinline autoplay width="800" height="600"></video>
+                <canvas id="camera_overlay" width="800" height="600"></canvas>
+                <canvas id="camera_mask" width="800" height="600"></canvas>
+                <img id="camera_back_img" src="images/camera_back.svg">
             </section>
+            
+            <!--
             <section id="emotion_container">
                 <div id="emotion_icons">
                     <img class="emotion_icon" id="icon1" src="images/icon_angry.png">
@@ -55,26 +57,35 @@
                 </div>
                 <div id="emotion_chart"></div>
             </section>
+            -->
             
-            <nav><a download="jyakigan.png" id="camera_shutter" href="#camera">シャッター</a></nav>
+            <a download="jyakigan.png" id="camera_shutter" href="#">シャッター</a>
         </article>
-        
+
+        <!--
         <article id="edit">
             <h1>編集する</h1>
-            <canvas id="save_image" width="400" height="300"></canvas>
+            <canvas id="save_image"></canvas>
             <nav><a href="">save</a><a href="">HOME</a></nav>
         </article>
-        
+        -->
+
         <article id="wishform">
             <h1>要望・不具合フォーム</h1>
         </article>
-        
+
         <article id="license">
             <h1>ライセンス</h1>
         </article>
     </main>
-    
-    <footer><nav><a href="#" id="history_back">戻る</a></nav></footer>
+
+    <footer>
+        <a href="#" id="history_back">戻る</a>
+        <nav>
+            <a href="#wishform">要望・不具合フォーム</a>
+            <a href="#license">LICENSE</a>
+        </nav>
+    </footer>
 </body>
 
 </html>

@@ -14,7 +14,6 @@
                 } else {
                     classNum = Math.floor(Math.random() * Math.floor(num / 2)) * 2 + 1;
                 }
-                console.log(count+ " " +classNum);
                 
                 h1Elm.innerHTML += '<span class="deco' + classNum + '">' + c + '</span>';
                 count++;
