@@ -62,6 +62,8 @@ h1 {
     transform: rotate3d(-2, 5, -1.5, -35deg);
     transform-origin: 50% 50%;
     z-index: 1;
+    transition-duration: 0.5s;
+    top:-50vh;
 }
 
 h1 .deco0 {
@@ -128,6 +130,12 @@ h1 .deco3 {
     margin-right: 2px;
 }
 
+/* HOME */
+
+#body_home #home h1{
+    top:0;
+}
+
 #body_home #home,
 #body_home #camera,
 #body_home #edit {
@@ -139,7 +147,6 @@ h1 .deco3 {
     left: 100vw;
 }
 
-
 #home_tocamera{
     position: relative;
     display: block;
@@ -147,12 +154,14 @@ h1 .deco3 {
     top:100vh;
     margin: auto;
     text-align: center;
+    transition-duration: 0.5s;
 }
 
 #body_home #home_tocamera{
     top:50vh;
 }
 
+/* CAMERA */
 
 #camera_finder {
     position: relative;
@@ -164,8 +173,6 @@ h1 .deco3 {
 #body_camera #camera_finder {
     left: 0vw;
 }
-
-
 
 #camera_mask,
 #camera_overlay,
