@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+#license{
+    position: absolute;
+    
+    transition-duration: 0.5s;
+    top:100vh;
+    background-color: #ffffff;
+}
+
+#body_license #license{
+    top:0vh;
+    overflow: scroll;
+    height:100vh;
+    width: 100wh;
+    padding: 40px;
+}
+

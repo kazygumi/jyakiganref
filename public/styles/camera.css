@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+#body_camera #camera h1{
+    top:0;
+}
+
+#camera_finder {
+    position: relative;
+    /*margin : 0px auto;*/
+    transition-duration: 0.5s;
+    left: 200vw;
+}
+
+#body_camera #camera_finder {
+    left: 0vw;
+}
+
+#camera_back_img {
+    position: absolute;
+    top: 0px;
+    left: -30vw;
+    width: 130vw;
+}
+
+#camera_mask,
+#camera_overlay,
+#camera_preview {
+    position: absolute;
+    top: 27vw;
+    left: 0vw;
+    width: 100vw;
+    height: 72vw;
+    object-fit: cover;
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph;
+    /*IE*/
+    filter: fliph;
+    /*IE*/
+}
