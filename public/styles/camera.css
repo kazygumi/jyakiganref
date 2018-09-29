@@ -1,41 +1,108 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-#body_camera #camera h1{
-    top:0;
+#body_camera #camera h1
+{
+    top: 0;
 }
 
-#camera_finder {
-    position: relative;
-    /*margin : 0px auto;*/
-    transition-duration: 0.5s;
+#camera_finder
+{
+    position: fixed;
     left: 200vw;
+
+    width: 100vw;
+    height: 110vw;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+
+    background-color: #000;
 }
 
-#body_camera #camera_finder {
+#body_camera #camera_finder
+{
     left: 0vw;
 }
 
-#camera_back_img {
+#camera_back_img
+{
     position: absolute;
-    top: 0px;
+    top: 0;
     left: -30vw;
+
     width: 130vw;
 }
 
 #camera_mask,
 #camera_overlay,
-#camera_preview {
+#camera_preview
+{
     position: absolute;
     top: 27vw;
     left: 0vw;
+
     width: 100vw;
     height: 72vw;
-    object-fit: cover;
-    -o-transform: scaleX(-1);
+
     -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+         -o-transform: scaleX(-1);
+            transform: scaleX(-1);
+
+    object-fit: cover;
     -ms-filter: fliph;
     /*IE*/
-    filter: fliph;
+        filter: fliph;
     /*IE*/
+}
+
+#camera_top
+{
+    position: fixed;
+    bottom: -64em;
+
+    overflow: hidden;
+
+    width: 100vw;
+    height: 64vw;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+
+    background-image: url(../images/camera_top.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+#body_camera #camera_top
+{
+    bottom: 2em;
+}
+
+#camera_release
+{
+    position: absolute;
+    top: 39vw;
+    left: 45vw;
+
+    overflow: hidden;
+
+    width: 18vw;
+    height: 18vw;
+
+    white-space: nowrap;
+    text-indent: 100%;
+
+    background-image: url(../images/camera_release.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+#camera_dial
+{
+    position: absolute;
+    top: 41vw;
+    left: 5vw;
+
+    width: 37vw;
+    height: 37vw;
 }

@@ -1,19 +1,35 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-#body_home #home h1{
-    top:0;
+#home
+{
+    width: 100vw;
 }
 
-#home_tocamera{
+#body_home #home
+{
+    height: 100vh;
+}
+
+#body_home #home h1
+{
+    top: 0;
+}
+
+#home_tocamera
+{
     position: relative;
+    top: 100vh;
+
     display: block;
+
     width: 200px;
-    top:100vh;
     margin: auto;
+
+    transition-duration: .5s;
     text-align: center;
-    transition-duration: 0.5s;
 }
 
-#body_home #home_tocamera{
-    top:70vh;
+#body_home #home_tocamera
+{
+    top: 70vh;
 }

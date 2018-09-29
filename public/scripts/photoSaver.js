@@ -23,6 +23,6 @@
             e.target.href = hiddenCanvas.toDataURL();
         }
     }
-     document.getElementById('camera_shutter').addEventListener('click', savePhoto, false);
+     document.getElementById('camera_release').addEventListener('click', savePhoto, false);
 
 })();

@@ -12,13 +12,17 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+time, mark, audio, video
+{
+    font: inherit;
+    font-size: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    vertical-align: baseline;
+
+    border: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -27,123 +31,165 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-html, body{
-    height: 100%;
-    background-color: #000000;
+html,body
+{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #c60019;
 }
 
-body {
-	line-height: 1.5;
+body
+{
+    line-height: 1.5;
 }
 
-ol, ul {
-	list-style: none;
+ol,ul
+{
+    list-style: none;
 }
 
-blockquote, q {
-	quotes: none;
+blockquote,q
+{
+    quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,blockquote:after,
+q:before,q:after
+{
+    content: '';
+    content: none;
 }
 
-table {
-    border-collapse: collapse;
+table
+{
     border-spacing: 0;
+    border-collapse: collapse;
 }
 
-main {
+main
+{
     position: fixed;
-    width: 100%;
-    height: 100%;
+
     overflow: hidden;
-    transition-duration: 0.5s;
+
+    width: 100vw;
+    height: 100vh;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+
     perspective: 1000px;
 }
 
-article{
+article
+{
     position: fixed;
-    transition-duration: 0.5s;
 }
 
-h1 {
+h1
+{
     position: absolute;
+    z-index: 1;
+    top: -50vh;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
     transform: rotate3d(-2, 5, -1.5, -35deg);
     transform-origin: 50% 50%;
-    z-index: 1;
-    transition-duration: 0.5s;
-    top:-50vh;
 }
 
-h1 .deco0 {
-    color: #fff;
-    background: #C60019;
-    -webkit-transform: rotate(10deg);
-    -ms-transform: rotate(10deg);
-    transform: rotate(10deg);
-    display: inline-block;
+h1 .deco0
+{
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 40px;
-    font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.1;
-    padding: 2px 3px;
-    -webkit-box-shadow: 4px 4px 0px 6px #000;
-    box-shadow: 3px 3px 0px 4px #fff;
+
+    display: inline-block;
+
     margin-right: 2px;
+    padding: 2px 3px;
+
+    -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+            transform: rotate(10deg);
+
+    color: #fff;
+    background: #c60019;
+    -webkit-box-shadow: 4px 4px 0 6px #000;
+            box-shadow: 3px 3px 0 4px #fff;
 }
 
-h1 .deco1 {
-    color: #fff;
-    background: #000;
-    -webkit-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-    display: inline-block;
+h1 .deco1
+{
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 24px;
-    font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.1;
-    padding: 2px 3px;
-    -webkit-box-shadow: 4px 4px 0px 6px #C60019;
-    box-shadow: 3px 3px 0px 4px #fff;
-    margin-right: 2px;
-}
 
-h1 .deco2 {
+    display: inline-block;
+
+    margin-right: 2px;
+    padding: 2px 3px;
+
+    -webkit-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+
     color: #fff;
     background: #000;
-    -webkit-transform: rotate(2deg);
-    -ms-transform: rotate(2deg);
-    transform: rotate(2deg);
-    display: inline-block;
+    -webkit-box-shadow: 4px 4px 0 6px #c60019;
+            box-shadow: 3px 3px 0 4px #fff;
+}
+
+h1 .deco2
+{
+    font-family: 'Noto Serif JP', sans-serif;
     font-size: 32px;
-    font-family: 'Noto Serif JP', sans-serif;
     line-height: 1.1;
-    padding: 2px 3px;
-    -webkit-box-shadow: 4px 4px 0px 6px #000;
-    box-shadow: 3px 3px 0px 4px #fff;
-    margin-right: 2px;
-}
 
-h1 .deco3 {
-    color: #C60019;
-    background: #000;
-    -webkit-transform: rotate(-8deg);
-    -ms-transform: rotate(-8deg);
-    transform: rotate(-8deg);
     display: inline-block;
-    font-size: 20px;
-    font-family: 'Noto Serif JP', sans-serif;
-    line-height: 1.1;
-    padding: 2px 3px;
-    -webkit-box-shadow: 4px 4px 0px 6px #C60019;
-    box-shadow: 3px 3px 0px 4px #fff;
+
     margin-right: 2px;
+    padding: 2px 3px;
+
+    -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+            transform: rotate(2deg);
+
+    color: #fff;
+    background: #000;
+    -webkit-box-shadow: 4px 4px 0 6px #000;
+            box-shadow: 3px 3px 0 4px #fff;
 }
 
-footer{
-    position: absolute;
+h1 .deco3
+{
+    font-family: 'Noto Serif JP', sans-serif;
+    font-size: 20px;
+    line-height: 1.1;
+
+    display: inline-block;
+
+    margin-right: 2px;
+    padding: 2px 3px;
+
+    -webkit-transform: rotate(-8deg);
+        -ms-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+
+    color: #c60019;
+    background: #000;
+    -webkit-box-shadow: 4px 4px 0 6px #c60019;
+            box-shadow: 3px 3px 0 4px #fff;
+}
+
+footer
+{
+    position: fixed;
+    z-index: 100;
     bottom: 0;
+
     width: 100vw;
+
+    background-color: #000;
 }
