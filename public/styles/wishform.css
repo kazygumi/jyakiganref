@@ -1,1 +1,16 @@
 @charset "utf-8";
+
+#wishform h1
+{
+    position: fixed;
+    z-index: 3;
+    top: -10vw;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+#body_wishform #wishform h1
+{
+    top: 0;
+}

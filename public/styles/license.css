@@ -21,6 +21,21 @@
     top: 0vh;
 }
 
+#license h1
+{
+    position: fixed;
+    z-index: 3;
+    top: -10vw;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+#body_license #license h1
+{
+    top: 0;
+}
+
 #body_license #license div
 {
     overflow: scroll;

@@ -31,12 +31,13 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-html,body
+html,
+body
 {
     width: 100vw;
     height: 100vh;
 
-    background-color: #c60019;
+    background-color: #e90000;
 }
 
 body
@@ -44,18 +45,22 @@ body
     line-height: 1.5;
 }
 
-ol,ul
+ol,
+ul
 {
     list-style: none;
 }
 
-blockquote,q
+blockquote,
+q
 {
     quotes: none;
 }
 
-blockquote:before,blockquote:after,
-q:before,q:after
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
 {
     content: '';
     content: none;
@@ -75,11 +80,6 @@ main
 
     width: 100vw;
     height: 100vh;
-
-    transition-timing-function: ease-in-out;
-    transition-duration: 1s;
-
-    perspective: 1000px;
 }
 
 article
@@ -87,19 +87,15 @@ article
     position: fixed;
 }
 
-h1
+.deco
 {
     position: absolute;
-    z-index: 1;
-    top: -50vh;
 
-    transition-timing-function: ease-in-out;
-    transition-duration: 1s;
     transform: rotate3d(-2, 5, -1.5, -35deg);
     transform-origin: 50% 50%;
 }
 
-h1 .deco0
+.deco .deco0
 {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 40px;
@@ -120,7 +116,7 @@ h1 .deco0
             box-shadow: 3px 3px 0 4px #fff;
 }
 
-h1 .deco1
+.deco .deco1
 {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 24px;
@@ -141,7 +137,7 @@ h1 .deco1
             box-shadow: 3px 3px 0 4px #fff;
 }
 
-h1 .deco2
+.deco .deco2
 {
     font-family: 'Noto Serif JP', sans-serif;
     font-size: 32px;
@@ -162,7 +158,7 @@ h1 .deco2
             box-shadow: 3px 3px 0 4px #fff;
 }
 
-h1 .deco3
+.deco .deco3
 {
     font-family: 'Noto Serif JP', sans-serif;
     font-size: 20px;
@@ -183,13 +179,82 @@ h1 .deco3
             box-shadow: 3px 3px 0 4px #fff;
 }
 
+aside
+{
+    position: fixed;
+    z-index: 1;
+    top: 0vw;
+    left: 120vw;
+
+    width: 100vh;
+    height: 10vw;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    transform-origin: left top;
+
+    color: #fff;
+    background-color: #000;
+}
+
+#body_home aside
+{
+    left: 100vw;
+}
+
+aside h1
+{
+    font-size: 5vw;
+
+    float: left;
+
+    margin-top: 1vw;
+    margin-left: 5vw;
+
+    color: #fff;
+}
+
+aside h1 strong
+{
+    font-weight: bold;
+}
+
+aside nav
+{
+    float: right;
+
+    margin-top: 2vw;
+    margin-right: 2vw;
+}
+
+aside nav a
+{
+    font-size: 3vw;
+
+    margin-right: 2vw;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
 footer
 {
     position: fixed;
     z-index: 100;
-    bottom: 0;
+    left:2vw;
+    bottom: 17vw;
 
     width: 100vw;
+    
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
 
-    background-color: #000;
+#body_home footer
+{
+    bottom: -10vw;
 }

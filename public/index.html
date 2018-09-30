@@ -39,11 +39,13 @@
     <main id="main">
         <article id="home">
             <h1>邪気眼レフカメラ</h1>
-            <a id="home_tocamera" href="#camera">撮影する</a>
+            <img id="home_icon" src="images/icon512.png">
+            <img id="home_character" src="images/home_character01.png">
+            <a id="home_tocamera" href="#camera" class="deco">殺影する</a>
         </article>
 
         <article id="camera">
-            <h1>撮影する</h1>
+            <h1>殺影する</h1>
             <section id="camera_finder">
                 <video id="camera_preview" preload="auto" loop playsinline autoplay width="800" height="600"></video>
                 <canvas id="camera_overlay" width="800" height="600"></canvas>
@@ -66,6 +68,7 @@
                 <a id="camera_release" download="jyakigan.png" href="#">シャッター</a>
                 <img id="camera_dial" src="images/camera_dial.svg">
                 <img id="camera_top_img" src="">
+                <canvas id="save_image"></canvas>
             </section>
         </article>
 
@@ -146,12 +149,17 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </article>
     </main>
 
-    <footer>
-        <a href="#" id="history_back">戻る</a>
+    <aside>
+        <h1><strong>Jakigan</strong>Ref</h1>
         <nav>
-            <a href="#wishform">要望・不具合フォーム</a>
+            <a href="https://github.com/kazygumi/jyakiganref" target="_blank">GitHub</a>
+            <a href="#wishform">お問い合わせ・不具合フォーム</a>
             <a href="#license">LICENSE</a>
         </nav>
+    </aside>
+
+    <footer>
+        <a class="deco" id="history_back" href="#">戻る</a>
     </footer>
 </body>
 

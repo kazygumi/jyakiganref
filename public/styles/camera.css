@@ -1,5 +1,15 @@
 @charset 'utf-8';
 
+#camera h1
+{
+    position: fixed;
+    z-index: 3;
+    top: -10vw;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
 #body_camera #camera h1
 {
     top: 0;
@@ -8,6 +18,7 @@
 #camera_finder
 {
     position: fixed;
+    z-index: 2;
     left: 200vw;
 
     width: 100vw;
@@ -58,6 +69,7 @@
 #camera_top
 {
     position: fixed;
+    z-index: 1;
     bottom: -64em;
 
     overflow: hidden;
@@ -75,7 +87,7 @@
 
 #body_camera #camera_top
 {
-    bottom: 2em;
+    bottom: 0;
 }
 
 #camera_release
@@ -105,4 +117,9 @@
 
     width: 37vw;
     height: 37vw;
+}
+
+#save_image
+{
+    display: none;
 }

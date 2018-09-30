@@ -21,6 +21,6 @@
         }
     }
 
-    textDecorate(document.getElementsByTagName('h1'), 4);
+    textDecorate(document.getElementsByClassName('deco'), 4);
 
 })();
