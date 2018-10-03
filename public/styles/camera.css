@@ -23,6 +23,8 @@
 
     width: 100vw;
     height: 110vw;
+    
+    overflow: hidden;
 
     transition-timing-function: ease-in-out;
     transition-duration: 1s;
@@ -33,6 +35,7 @@
 #body_camera #camera_finder
 {
     left: 0vw;
+    
 }
 
 #camera_back_img
@@ -54,6 +57,8 @@
 
     width: 100vw;
     height: 72vw;
+    
+    overflow: hidden;
 
     -webkit-transform: scaleX(-1);
          -o-transform: scaleX(-1);

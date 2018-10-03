@@ -98,13 +98,13 @@ article
 .deco .deco0
 {
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 40px;
+    font-size: 10vw;
     line-height: 1.1;
 
     display: inline-block;
 
-    margin-right: 2px;
-    padding: 2px 3px;
+    margin-right: 1vw;
+    padding: 1vw 2vw;
 
     -webkit-transform: rotate(10deg);
         -ms-transform: rotate(10deg);
@@ -112,20 +112,20 @@ article
 
     color: #fff;
     background: #c60019;
-    -webkit-box-shadow: 4px 4px 0 6px #000;
-            box-shadow: 3px 3px 0 4px #fff;
+    -webkit-box-shadow: 2vw 2vw 0 0vw #000;
+            box-shadow: 2vw 2vw 0 0vw #fff;
 }
 
 .deco .deco1
 {
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 24px;
+    font-size: 7vw;
     line-height: 1.1;
 
     display: inline-block;
 
-    margin-right: 2px;
-    padding: 2px 3px;
+    margin-right: 1vw;
+    padding: 1vw 2vw;
 
     -webkit-transform: rotate(-5deg);
         -ms-transform: rotate(-5deg);
@@ -133,20 +133,20 @@ article
 
     color: #fff;
     background: #000;
-    -webkit-box-shadow: 4px 4px 0 6px #c60019;
-            box-shadow: 3px 3px 0 4px #fff;
+    -webkit-box-shadow: 1.5vw 1.5vw 0 0vw #c60019;
+            box-shadow: 1.5vw 1.5vw 0 0vw #fff;
 }
 
 .deco .deco2
 {
     font-family: 'Noto Serif JP', sans-serif;
-    font-size: 32px;
+    font-size: 8vw;
     line-height: 1.1;
 
     display: inline-block;
 
-    margin-right: 2px;
-    padding: 2px 3px;
+    margin-right: 1vw;
+    padding: 1vw 2vw;
 
     -webkit-transform: rotate(2deg);
         -ms-transform: rotate(2deg);
@@ -154,20 +154,20 @@ article
 
     color: #fff;
     background: #000;
-    -webkit-box-shadow: 4px 4px 0 6px #000;
-            box-shadow: 3px 3px 0 4px #fff;
+    -webkit-box-shadow: 2vw 2vw 0 0vw #000;
+            box-shadow: 2vw 2vw 0 0vw #fff;
 }
 
 .deco .deco3
 {
     font-family: 'Noto Serif JP', sans-serif;
-    font-size: 20px;
+    font-size: 5vw;
     line-height: 1.1;
 
     display: inline-block;
 
-    margin-right: 2px;
-    padding: 2px 3px;
+    margin-right: 1vw;
+    padding: 1vw 2vw;
 
     -webkit-transform: rotate(-8deg);
         -ms-transform: rotate(-8deg);
@@ -175,8 +175,8 @@ article
 
     color: #c60019;
     background: #000;
-    -webkit-box-shadow: 4px 4px 0 6px #c60019;
-            box-shadow: 3px 3px 0 4px #fff;
+    -webkit-box-shadow: 2vw 2vw 0 0vw #c60019;
+            box-shadow: 1vw 1vw 0 0vw #fff;
 }
 
 aside

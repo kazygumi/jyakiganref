@@ -67,11 +67,10 @@
     position: fixed;
     z-index: 4;
     top: 300vw;
-    left: 25vw;
+    left: 22vw;
 
     display: block;
 
-    width: 200px;
     margin: auto;
 
     transition-timing-function: ease-in-out;
