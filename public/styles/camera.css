@@ -134,7 +134,7 @@
     z-index: 5;
     width: 100vw;
     left: -100vw;
-    bottom: 40vw;
+    bottom: 32vw;
     background-color: #000000;
     transition-timing-function: ease-in-out;
     transition-duration: 1s;
@@ -165,5 +165,9 @@
 
 
 #emotion_icon1, #emotion_icon2, #emotion_icon3, #emotion_icon4, #emotion_icon5, #emotion_icon6 {
-    visibility : hidden;
+    opacity: 0.5;
+}
+
+.masks {
+    display: none;
 }

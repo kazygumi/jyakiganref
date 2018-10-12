@@ -35,7 +35,6 @@
     /******** history back ********/
 
     document.getElementById('history_back').addEventListener('click', function (event) {
-        console.log('history.back');
         window.history.back(-1);
         return false;
     }, false);
